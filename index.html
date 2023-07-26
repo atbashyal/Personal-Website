@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ashutosh's Portfolio</title>
+	<!---custom css link---->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!----header design--->
+	<header>
+		<a href="#" class="logo">Stu<span>den</span>t</a>
+
+		<ul class="navlist">
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#services" style="color:black;">Interests</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact Me</a></li>
+		</ul>
+
+		<div class="bx bx-menu" id="menu-icon">
+
+		</div>
+	</header>
+
+	<!----home section design--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<div class="slide">
+				<span class="one">Namaste</span>
+				<span class="two">I am</span>
+			</div>
+			<h1>Ashutosh</h1>
+			<h3>Computer Science Engineer<span> Student</span></h3>
+			<p>Currently Studying in<br> Vellore Institute of Technology (VIT)</p>
+			<div class="button">
+				<a download="" href="Ashutosh Bashyal Resume.pdf" class="btn">Download CV</a>
+				<a class="btn2" onclick="openGit()"><span><i class='bx bxl-github'></i></span>Github</a>
+				<a class="btn2" onclick="openLin()"><span><i class='bx bxl-linkedin'></i></span>LinkedIn</a>
+			</div>
+
+			
+		</div>
+	</section>
+
+	<!----about section design--->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="img/about.jpg">
+		</div>
+
+		<div class="about-text">
+			<h2>About <span>Me</span></h2>
+			<h4>Robots | Machines | AI</h4>
+			<p>I am a Computer Science and Engineering Student. I have been fascinated by the world of Computers ever since I first knew what computers were. When I wrote my first programming language, that is when I anticipated where the world was headed. If you think about it, you can ask the most powerful machine human-kind has ever made, to do a task and it will do that and nothing else. This has all been possible because an electron decided to go for a walk. It is crazy to think about.</p>
+			<a href="https://linkedin.com/in/atbashyal" class="btn">LinkedIn</a>
+		</div>
+	</section>
+
+	<!----service section design--->
+	<!-- <section class="services" id="services">
+		<div class="main-text">
+			<p>What I am Expert In</p>
+			<h2><span>My</span> Interests</h2>
+		</div>
+
+		<div class="services-content">
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-bot'></i>
+				</div>
+				<h3>Artificial Intelligence</h3>
+				<p>There's no one thing that defines AI. It's more like a tapestry of modern intelligent technologies knit together in a strategic fashion that can then uplift and create a knowledge base that is automated - where you can extrapolate findings from there. </p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-code-alt'></i>
+				</div>
+				<h3>Web Development</h3>
+				<p>The designer does not begin with some preconceived idea. Rather, the idea is the result of careful study and ovservation, and the design a product of that idea.</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-edit-alt'></i>
+				</div>
+				<h3>UI/UX Design</h3>
+				<p>The whole point of human-centered design is to tame complexity to turn what would appeat to be a complicated tool into one that fits the task, that is understandable, usable, enjoyable.</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+		</div>
+	</section> -->
+
+	
+	<!-- Latest Projects Section -->
+	<section class="services" id="services">
+		<div class="main-text">
+			<!-- <p></p> -->
+			<h2><span>My</span> Projects</h2>
+		</div>
+
+		<div class="services-content">
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-face'></i>
+				</div>
+				<h3>Database Encryption using Facial Encodings</h3>
+				<!-- <p>en uplift and create a knowledge base </p> -->
+				<b>Tools used: </b><i>OpenCV, numpy, secrets, string, pickle, pyminizip, hashlib</i><br><br>
+				<ul>
+					<li>Led the development of a facial encoding-based encryption algorithm that uses facial encodings and user input to create a secure encryption key.</li><br>
+					<li>The encryption key is then used to encrypt the files, significantly improving user security and satisfaction by making it more difficult for unauthorized users to access sensitive data.</li>
+				</ul><br>
+				<a href="https://github.com/atbashyal/Database-Encryption-using-Facial-Recognition" class="read">More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-up-arrow-alt'></i>
+				</div>
+				<h3>Social Distancing Detection</h3>
+				<!-- <p>The designer does not begin with some preconceived idea. Rather, the idea is the result of careful study and ovservation, and the design a product of that idea.</p> -->
+				<b>Tools used: </b><i>Numpy, Scipy, imutils, OpenCV, argparse</i><br><br>
+				<ul>
+					<li>Developed an innovative system utilizing computer vision and deep learning to detect social distancing compliance in real-time.</li><br>
+					<li>Implemented advanced algorithms to analyze video streams and provide instant notifications when individuals violate social distancing guidelines, contributing to public health and safety.</li>
+				</ul><br>
+				<a href="https://github.com/atbashyal/Social-Distancing-Detection" class="read">More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<i class='bx bx-edit-alt'></i>
+				</div>
+				<h3>VIT One - University Home</h3>
+				<b>Tools used: </b><i>HTML/CSS, Bootstrap, PHP, JavaScript</i><br><br>
+				<ul>
+					<li>Developed a comprehensive Student Management System with a versatile set of features tailored for both freshers and Ph.D. candidates.</li><br>
+					<li>Designed an intuitive user interface facilitating easy student enrollment, course registration, and academic progress tracking for freshers, while also integrating advanced research management tools for Ph.D. scholars.</li><br>
+				</ul><br>
+				<a href="https://github.com/atbashyal/VIT-One" class="read">More</a>
+			</div>
+		</div><br>
+		<a class="readgit" onclick="openGit()">Find more on Github</a>
+	</section>
+
+	
+	
+
+	<!----portfolio section design--->
+	<!-- <section class="portfolio" id="portfolio">
+		<div class="main-text">
+			<p>Portfolio</p>
+			<h2><span>Latest</span> Project</h2>
+		</div>
+
+		<div class="portfolio-content">
+			<div class="row">
+				<img src="img/portfolio1.jpg">
+				<div class="layer">
+					<h5>VIT One</h5>
+					<p>Working towards making VIT a home.</p>
+					<a href="https://github.com/atbashyal/VIT-One"><i class='bx bx-link-external'></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="img/portfolio2.jpg">
+				<div class="layer">
+					<h5>Social Distancing Detection</h5>
+					<p>Software that checks if the distance is maintained between two people to control the spread of Corona Virus.</p>
+					<a href="https://github.com/atbashyal/Social-Distancing-Detection"><i class='bx bx-link-external'></i></a>
+				</div>
+			</div>
+
+		</div>
+	</section> -->
+
+	<!----contact section design--->
+	<section class="contact" id="contact">
+		<div class="contact-text">
+			<h2>Contact <span>Me!</span></h2><br>
+			<!-- <h4>If You Have Any Project In Your Mind.</h4> -->
+			<p>I'm a Computer Science Engineer Student pursuing career in Artificial Intelligence.</p>
+			<div class="list">
+				<li><a href="#">+91 7845739416</a></li>
+				<li><a href="#">atbashyal@gmail.com</a></li>
+				<!-- <li><a href="#">Like Share & Subscribe</a></li> -->
+			</div>
+
+			<div class="contact-icons">
+				<a href="https://www.linkedin.com/in/atbashyal/"><i class='bx bxl-linkedin'></i></a>
+				<a href="https://twitter.com/atbashyal"><i class='bx bxl-twitter'></i></a>
+				<a href="https://www.instagram.com/ashutosh.bashyal/"><i class='bx bxl-instagram-alt'></i></a>
+				<a href="https://github.com/atbashyal"><i class='bx bxl-github'></i></a>
+			</div>
+		</div>
+
+		<div class="contact-form">
+			<form action="">
+				<input type="name" placeholder="Your Name" required>
+				<input type="email" placeholder="Your Email Address" required>
+				<input type="" placeholder="Your Mobile Number" required>
+				<textarea name="" id="" cols="35" rows="10" placeholder="Put your message here" required></textarea>
+				<input type="submit" value="Send Message" class="submit" required>
+			</form>
+		</div>
+	</section>
+
+	<!----end section design--->
+	<section class="end">
+		<div class="last-text">
+			<p>A smooth sea never made a great sailor.</p>
+		</div>
+
+		<div class="top">
+			<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+		</div>
+	</section>
+
+	<!---custom js link--->
+	<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>

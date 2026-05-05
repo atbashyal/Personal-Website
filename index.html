@@ -2,8 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <base href="/">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -17,8 +16,43 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
+                touch-action: none;
+                -ms-touch-action: none;
             }
         </style>
+        <script>
+            // Prevent Ctrl+Wheel zoom
+            document.addEventListener('wheel', function(event) {
+                if (event.ctrlKey) {
+                    event.preventDefault();
+                }
+            }, { passive: false });
+
+            // Prevent Ctrl +/-/0 zoom
+            document.addEventListener('keydown', function(event) {
+                if (event.ctrlKey && (
+                    event.key === '+' ||
+                    event.key === '-' ||
+                    event.key === '=' ||
+                    event.key === '0' ||
+                    event.keyCode === 187 ||
+                    event.keyCode === 189 ||
+                    event.keyCode === 48
+                )) {
+                    event.preventDefault();
+                }
+            });
+
+            // Prevent double-tap zoom (secondary measure for mobile)
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+        </script>
     </head>
     <body style="text-align: center; align-content: center">
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" role="presentation">
